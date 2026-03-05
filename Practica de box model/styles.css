@@ -1,0 +1,39 @@
+/*CARLOS JAVIER SANTANA SANDOVAL*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: peru;
+}
+
+.caja {
+    width: 200px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+#caja1 {
+    /* mantiene valores por defecto */
+    border: 2px solid green;
+}
+
+#caja2 {
+    /* modificaremos aquí */
+    border: 5px solid red;
+    margin: 20px;
+    padding: 5px;
+}
+
+#caja3 {
+    /* modificaremos aquí */
+    border: 2px solid white;
+    padding: 50px;
+}
