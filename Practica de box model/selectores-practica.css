@@ -13,3 +13,9 @@ p {
     border: 2px dotted red;
 }
 
+/* Ejercicio 3: Selector de atributo */
+a,a[target="_blank"]::after {
+    text-decoration: none;
+    content: " 🔗";
+}
+
