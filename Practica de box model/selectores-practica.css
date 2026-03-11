@@ -34,3 +34,8 @@ h2+p {
     margin-top: 0;
 }
 
+/* Ejercicio 7: Combinador hermano general */
+h2~p {
+    color: lightgray;
+}
+
