@@ -7,3 +7,9 @@ p {
 .destacado {
     background-color: lightyellow;
 }
+
+/* Ejercicio 2: Selector de ID */
+#experiencia {
+    border: 2px dotted red;
+}
+
