@@ -24,3 +24,8 @@ a,a[target="_blank"]::after {
     font-size: 0.9em;
 }
 
+/* Ejercicio 5: Combinador hijo directo */
+#experiencia>ul>li {
+    list-style-type: square;
+}
+
