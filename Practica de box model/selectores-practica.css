@@ -19,3 +19,8 @@ a,a[target="_blank"]::after {
     content: " 🔗";
 }
 
+/* Ejercicio 4: Combinador descendiente */
+#experiencia p {
+    font-size: 0.9em;
+}
+
