@@ -29,3 +29,8 @@ a,a[target="_blank"]::after {
     list-style-type: square;
 }
 
+/* Ejercicio 6: Combinador hermano adyacente */
+h2+p {
+    margin-top: 0;
+}
+
