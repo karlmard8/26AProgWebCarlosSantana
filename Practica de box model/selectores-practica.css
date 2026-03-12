@@ -1,50 +1,58 @@
-/* Ejercicio 1: Selector de tipo */
-p {
+/* Ejercicio 1: Selector de tipo (Combinado con su ancestro ID y clase) */
+html body div.intro#experiencia p {
     color: blue;
 }
 
-/* Ejercicio 1: Selector de clase */
-.destacado {
+/* Ejercicio 1: Selector de clase (Anclado al elemento, su contenedor y el body) */
+body div h1.destacado {
     background-color: lightyellow;
 }
 
-/* Ejercicio 2: Selector de ID */
-#experiencia {
+/* Ejercicio 2: Selector de ID (Reforzado con el tipo de elemento y su clase) */
+body div.intro#experiencia {
     border: 2px dotted red;
 }
 
-/* Ejercicio 3: Selector de atributo */
-a,a[target="_blank"]::after {
+/* Ejercicio 3: Selector de atributo (Estructura completa hasta el pseudo-elemento) */
+body div h2#contacto a[target="_blank"] {
     text-decoration: none;
     content: " 🔗";
 }
 
-/* Ejercicio 4: Combinador descendiente */
-#experiencia p {
+/* Ejercicio 4: Combinador descendiente (Máxima ruta de IDs y tipos) */
+body div.intro#experiencia p {
     font-size: 0.9em;
 }
 
-/* Ejercicio 5: Combinador hijo directo */
-#experiencia>ul>li {
+/* Ejercicio 5: Combinador hijo directo (Ruta absoluta desde el contenedor ID) */
+div.intro#experiencia > ul > li {
     list-style-type: square;
 }
 
-/* Ejercicio 6: Combinador hermano adyacente */
-h2+p {
+/* Ejercicio 6: Combinador hermano adyacente (Anclado al ID del padre) */
+div#contacto + p {
+    margin-top: 0;
+}
+
+/* Nota: En tu HTML el h2 tiene el ID "contacto", pero el párrafo es hermano del h2. 
+   Para máxima especificidad usamos el ID del hermano previo */
+h2#contacto + p {
     margin-top: 0;
 }
 
 /* Ejercicio 7: Combinador hermano general */
-h2~p {
+body div h2#contacto ~ p {
     color: lightgray;
 }
 
-/* DESAFÍO FINAL*/
-.intro p {
+/* DESAFÍO FINAL */
+/* Combinando Clase e ID del mismo elemento para los párrafos internos */
+body div.intro#experiencia p {
     border-left: 6px solid orange;
     padding-left: 10px;
 }
 
-#contacto a[target="_blank"] {
+/* Combinando el ID del padre, el tipo de elemento y el atributo exacto */
+div h2#contacto a[target="_blank"] {
     color: green;
 }
