@@ -191,3 +191,27 @@ input[type="submit"] {
 #btn {
   border: 5px solid purple; /* 5 */
 }
+
+/* EJERCICIO 8*/
+.card {
+  background: lightgray; /* 1 */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+#card1 .card-title {
+  color: maroon; /* 2 */
+}
+
+#card2 .card-text {
+  color: mediumblue; /* 3 */
+}
+
+.card .card-title {
+  color: mediumvioletred; /* 4 */
+}
+
+.card .card-text {
+  color: midnightblue; /* 5 */
+}
