@@ -56,3 +56,40 @@ body div.intro#experiencia p {
 div h2#contacto a[target="_blank"] {
     color: green;
 }
+
+#navegacion-extra {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn-personalizado {
+    background-color: #2563eb; /* Azul profesional */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px; /* Bordes redondeados modernos */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al pasar el mouse */
+.btn-personalizado:hover {
+    background-color: #1d4ed8; /* Un tono más oscuro */
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al hacer clic */
+.btn-personalizado:active {
+    transform: translateY(0);
+}
+
+/* Quitar estilos por defecto del enlace */
+.boton-enlace {
+    text-decoration: none;
+}
