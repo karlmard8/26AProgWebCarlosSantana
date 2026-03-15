@@ -125,5 +125,28 @@
   Al enlace Contacto porque tiene el id #contacto.
   -->
 
+  <!-- Ejercicio 6 -->
+  <section class="bloque">
+    <h2>Ejercicio 6</h2>
+    <div id="padre">
+      <div class="hijo">
+        <p class="nieto">Texto X</p>
+      </div>
+      <p class="hijo">Texto Y</p>
+    </div>
+  </section>
+  <!--
+  Colores de "Texto X" y "Texto Y".
+  Texto X: darkturquoise
+  Texto Y: darkslategray
+
+  Explica la diferencia entre las reglas 3 y 4.
+  La regla 3 selecciona cualquier .hijo dentro de #padre.
+  La regla 4 solo selecciona los hijos directos de #padre.
+
+  ¿Cuál es la especificidad de la regla 5?
+  #padre .hijo .nieto = (1,2,0)
+  -->
+
 </body>
 </html>

@@ -144,3 +144,24 @@ p#ultimo.contenido {
 .menu li a.enlace {
   color: darkred; /* 5 */
 }
+
+/* EJERCICIO 6*/
+#padre div {
+  color: darksalmon; /* 1 */
+}
+
+.hijo {
+  color: darkseagreen; /* 2 */
+}
+
+#padre .hijo {
+  color: darkslateblue; /* 3 */
+}
+
+#padre > .hijo {
+  color: darkslategray; /* 4 */
+}
+
+#padre .hijo .nieto {
+  color: darkturquoise; /* 5 */
+}
