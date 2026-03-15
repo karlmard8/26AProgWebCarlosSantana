@@ -228,5 +228,32 @@
   (0,3,0)
   -->
 
+  <!-- Ejercicio 10 -->
+  <section class="bloque">
+    <h2>Ejercicio 10</h2>
+    <div class="contenedor" id="contenedor">
+      <p>Párrafo A</p>
+      <div class="interno">
+        <p class="destacado">Párrafo B</p>
+      </div>
+      <p class="destacado">Párrafo C</p>
+    </div>
+  </section>
+  <!--
+  Colores de "Párrafo A", "Párrafo B" y "Párrafo C".
+  Párrafo A: plum
+  Párrafo B: rosybrown
+  Párrafo C: powderblue
+
+  Explica por que "Parrafo B" no toma el color de la regla 6 si tiene clase destacado y esta dentro de .interno.
+  Párrafo B sí toma la regla 6 porque tiene clase destacado y está dentro de .interno dentro de #contenedor.
+
+  ¿Qué regla tiene mayor especificidad? Ordenalas de mayor a menor.
+  #contenedor .interno .destacado
+  #contenedor .destacado
+  #contenedor p
+  .contenedor .interno p
+  .destacado
+  -->
 </body>
 </html>

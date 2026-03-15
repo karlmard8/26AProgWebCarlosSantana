@@ -240,3 +240,28 @@ input[type="submit"] {
 .main-e9 .seccion .especial {
   color: paleturquoise; /* 6 */
 }
+
+/* EJERCICIO 10*/
+#contenedor p {
+  color: peru; /* 1 */
+}
+
+.destacado {
+  color: pink; /* 2 */
+}
+
+#contenedor p {
+  color: plum; /* 3 */
+}
+
+#contenedor .destacado {
+  color: powderblue; /* 4 */
+}
+
+.contenedor .interno p {
+  color: rebeccapurple; /* 5 */
+}
+
+#contenedor .interno .destacado {
+  color: rosybrown; /* 6 */
+}
