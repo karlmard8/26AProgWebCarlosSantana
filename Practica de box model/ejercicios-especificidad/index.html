@@ -148,5 +148,31 @@
   #padre .hijo .nieto = (1,2,0)
   -->
 
+  <!-- Ejercicio 7 -->
+  <section class="bloque">
+    <h2>Ejercicio 7</h2>
+    <form id="registro">
+      <input type="text" name="usuario" class="campo" placeholder="Usuario" />
+      <input type="password" name="clave" class="campo" placeholder="Contraseña" />
+      <input type="submit" value="Enviar" id="btn" />
+    </form>
+  </section>
+  <!--
+  ¿Que grosor y color de borde tiene cada input?
+  Usuario: 3px verde
+  Contraseña: 3px verde
+  Enviar: 5px morado
+
+  Ordena las reglas por especificidad de menor a mayor.
+  input
+  .campo
+  input[type="submit"]
+  #registro input
+  #btn
+
+  ¿Que pasa si se anade limportant a la regla 1?
+  Ganaría sobre todas las demás y todos los inputs tendrían ese borde.
+  -->
+
 </body>
 </html>

@@ -165,3 +165,29 @@ p#ultimo.contenido {
 #padre .hijo .nieto {
   color: darkturquoise; /* 5 */
 }
+
+/* EJERCICIO 7*/
+input {
+  border: 1px solid black; /* 1 */
+  padding: 8px;
+  margin: 5px;
+  display: block;
+}
+
+.campo {
+  border: 2px solid blue; /* 2 */
+}
+
+#registro input {
+  border: 3px solid green; /* 3 */
+}
+
+input[type="submit"] {
+  border: 4px solid red; /* 4 */
+  background: white;
+  cursor: pointer;
+}
+
+#btn {
+  border: 5px solid purple; /* 5 */
+}
