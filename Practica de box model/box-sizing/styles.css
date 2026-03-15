@@ -20,8 +20,8 @@ text-align:center;
 width:906px;
 margin:auto;
 border:3px solid black;
-background:white;
-
+background:#e6f2ff;
+display:flex;
 }
 
 .card{
