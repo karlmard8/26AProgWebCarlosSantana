@@ -21,7 +21,7 @@ width:906px;
 margin:auto;
 border:3px solid black;
 background:#e6f2ff;
-/*display:flex;*/
+display:flex;
 }
 
 .card{
