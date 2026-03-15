@@ -21,16 +21,13 @@ width:906px;
 margin:auto;
 border:3px solid black;
 background:#e6f2ff;
-display:flex;
+/*display:flex;*/
 }
 
 .card{
 width:33.33%;
-padding:30px;
-border: 15px solid steelblue;
-float:left;
-background:#e6f2ff;
-outline:3px dashed red;
+padding:50px;
+border: 25px solid red;
 }
 
 
