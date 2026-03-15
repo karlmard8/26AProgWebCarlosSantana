@@ -215,3 +215,28 @@ input[type="submit"] {
 .card .card-text {
   color: midnightblue; /* 5 */
 }
+
+/* EJERCICIO 9*/
+.main-e9 p {
+  color: navy; /* 1 */
+}
+
+.main-e9 .seccion p {
+  color: olive; /* 2 */
+}
+
+#s1 p {
+  color: orange; /* 3 */
+}
+
+#s1 .especial {
+  color: orchid; /* 4 */
+}
+
+.main-e9 .seccion p {
+  color: palegreen; /* 5 */
+}
+
+.main-e9 .seccion .especial {
+  color: paleturquoise; /* 6 */
+}
