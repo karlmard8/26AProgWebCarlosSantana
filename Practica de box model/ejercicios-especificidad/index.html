@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicios de Especificidad CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Carlos Javier Santana Sandoval - 8.° A</h1>
+
+  <!-- Ejercicio 1 -->
+  <section class="bloque">
+    <h2>Ejercicio 1</h2>
+    <div id="contenedor-e1">
+      <p class="texto" id="parrafo">Texto 1</p>
+      <p class="texto">Texto 2</p>
+    </div>
+    <p class="texto">Texto 3</p>
+  </section>
+  <!--
+  ¿De qué color se ve cada párrafo?
+  Texto 1: rojo
+  Texto 2: morado
+  Texto 3: azul
+
+  Calcula la especificidad de cada regla.
+  #contenedor-e1 p = (1,0,1)
+  #contenedor-e1 .texto = (1,1,0)
+  #parrafo = (1,0,0)
+  .bloque > .texto = (0,2,0)
+
+  Explica por qué se aplica cada color.
+  El id #parrafo tiene más prioridad, por eso Texto 1 es rojo.
+  Texto 2 toma morado porque la última regla con .texto dentro del contenedor sobrescribe las anteriores.
+  Texto 3 está fuera del contenedor y usa la regla .bloque > .texto.
+  -->
