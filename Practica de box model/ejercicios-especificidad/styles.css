@@ -123,3 +123,24 @@ li#primero.item {
 p#ultimo.contenido {
   color: darkgoldenrod; /* 5 */
 }
+
+/* EJERCICIO 5*/
+.nav-e5 a {
+  color: darkblue; /* 1 */
+}
+
+.menu a {
+  color: darkgreen; /* 2 */
+}
+
+.nav-e5 ul li a {
+  color: darkmagenta; /* 3 */
+}
+
+#contacto {
+  color: darkorange; /* 4 */
+}
+
+.menu li a.enlace {
+  color: darkred; /* 5 */
+}
