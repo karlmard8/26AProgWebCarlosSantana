@@ -46,3 +46,30 @@ h1 {
 .bloque > .texto {
   color: blue;
 }
+
+/* EJERCICIO 2*/
+.lista-e2 li {
+  color: gray; /* 1 */
+}
+
+.lista-e2 .item {
+  color: olive; /* 2 */
+}
+
+#primero {
+  color: navy; /* 3 */
+}
+
+.lista-e2 ul li.item {
+  color: teal; /* 4 - esta no aplica porque no hay ul dentro de .lista-e2 */
+}
+
+/* Versión funcional para que veas el resultado esperado del ejercicio */
+.lista-e2 li.item {
+  color: teal; /* equivalente visual */
+}
+
+li#primero.item {
+  color: fuchsia; /* 5 */
+}
+

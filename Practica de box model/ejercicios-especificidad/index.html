@@ -35,3 +35,25 @@
   Texto 2 toma morado porque la última regla con .texto dentro del contenedor sobrescribe las anteriores.
   Texto 3 está fuera del contenedor y usa la regla .bloque > .texto.
   -->
+
+  <!-- Ejercicio 2 -->
+  <section class="bloque">
+    <h2>Ejercicio 2</h2>
+    <ul class="lista-e2">
+      <li class="item" id="primero">Elemento 1</li>
+      <li class="item">Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+  </section>
+  <!--
+  Colores resultantes para cada <li>.
+  Elemento 1: fuchsia
+  Elemento 2: teal
+  Elemento 3: gray
+
+  ¿Cual es la especificidad de la regla 5?
+  li#primero.item = (1,1,1)
+
+  ¿Que ocurre si se intercambia el orden de las reglas 4 y 5?
+  No cambia porque la regla 5 sigue teniendo mayor especificidad.
+  -->
