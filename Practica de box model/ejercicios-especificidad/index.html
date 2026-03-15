@@ -80,5 +80,26 @@
   Cuando hay misma especificidad, gana la que está más abajo en el CSS.
   -->
 
+  <!-- Ejercicio 4 -->
+  <section class="bloque">
+    <h2>Ejercicio 4</h2>
+    <article class="articulo-e4">
+      <h2 class="titulo">Título</h2>
+      <p class="contenido">Párrafo 1</p>
+      <p class="contenido" id="ultimo">Párrafo 2</p>
+    </article>
+  </section>
+  <!--
+  Colores de cada elemento.
+  Párrafo 1: darkcyan
+  Párrafo 2: darkgoldenrod
+
+  ¿Qué regla se aplica al párrafo con id "ultimo"? ¿Por qué?
+  p#ultimo.contenido porque tiene id, clase y elemento, por eso tiene más especificidad.
+
+  Si se añade limportant a la regla 2, ¿cambia algo? ¿Por qué?
+  Sí cambiaría, porque !important tiene prioridad sobre las demás reglas.
+  -->
+
 </body>
 </html>

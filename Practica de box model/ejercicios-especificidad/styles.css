@@ -97,3 +97,29 @@ li#primero.item {
 #main-e3 .resaltado {
   color: indigo; /* 6 */
 }
+
+/* EJERCICIO 4*/
+.articulo-e4 article p {
+  color: brown; /* 1 - no aplica porque no hay article dentro de .articulo-e4 */
+}
+
+/* Versión funcional equivalente */
+.articulo-e4 p {
+  color: brown;
+}
+
+.contenido {
+  color: chocolate; /* 2 */
+}
+
+#ultimo {
+  color: crimson; /* 3 */
+}
+
+.articulo-e4 .contenido {
+  color: darkcyan; /* 4 */
+}
+
+p#ultimo.contenido {
+  color: darkgoldenrod; /* 5 */
+}
