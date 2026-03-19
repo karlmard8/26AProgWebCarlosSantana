@@ -1,111 +1,167 @@
-/* 1. Bloques */
+@keyframes gradienteMovil {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes moverBorde {
+    from { background-position: 0% 0%; }
+    to { background-position: 200% 0%; }
+}
+
+body {
+    background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 600% 600%;
+    animation: gradienteMovil 15s ease infinite;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
 header {
- background: linear-gradient(135deg, #667eea, #764ba2);
- color: white;
- padding: 20px;
- text-align: center;
+    background: linear-gradient(210deg, #11998e, #38ef7d);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .caja {
- background: linear-gradient(to right, #ff7e5f, #feb47b);
- padding: 20px;
- margin-top: 10px;
+    background: 
+        radial-gradient(circle, rgba(255,255,255,0.2) 2px, transparent 2px),
+        radial-gradient(circle, #8e2de2, #4a00e0);
+    background-size: 20px 20px, 100% 100%;
+    padding: 20px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
 }
 
-
-/* 2. Inline */
 .inline {
- background: radial-gradient(circle, yellow, orange);
- padding: 5px;
+    background: radial-gradient(circle, #fcead2, #f2994a);
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .link-gradiente {
- display: inline-block;
- background: linear-gradient(to right, cyan, blue);
- padding: 5px 10px;
- color: white;
- text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(to right, #f2994a, #f2c94c);
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
-
-/* 3. Botón */
 .btn {
- background: linear-gradient(to right, #ff416c, #ff4b2b);
- border: none;
- padding: 10px 20px;
- color: white;
- cursor: pointer;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    border-radius: 4px;
 }
 
-
-/* 4. Fondo general */
-body {
- background: conic-gradient(from 90deg, red, yellow, green, blue);
- min-height: 100vh;
- font-family: Arial, sans-serif;
+.btn:hover {
+    
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
-
-/* 5. Texto gradiente */
 .texto-gradiente {
- background: linear-gradient(45deg, #f06, #f90);
- -webkit-background-clip: text;
- color: transparent;
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
 }
 
+.texto-gradiente span {
+    background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
-/* 6. Imagen overlay */
 .img-container {
- position: relative;
- display: inline-block;
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .img-container img {
- display: block;
+    display: block;
 }
 
 .img-container::after {
- content: "";
- position: absolute;
- inset: 0;
- background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    content: "VISTA PREVIA";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.4s ease;
 }
 
+.img-container:hover::after {
+    opacity: 1; 
+}
 
-/* 7. Lista */
 li {
- list-style: none;
- position: relative;
- padding-left: 20px;
- margin-bottom: 5px;
+    list-style: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: white;
 }
 
 li::before {
- content: "";
- position: absolute;
- left: 0;
- top: 5px;
- width: 10px;
- height: 10px;
- background: linear-gradient(45deg, purple, cyan);
- border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    border-radius: 50%;
 }
 
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-collapse: collapse;
+}
 
-/* 8. Tabla */
 th {
- background: linear-gradient(to right, #4facfe, #00f2fe);
- color: white;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    color: white;
+    padding: 10px;
 }
 
 tr.highlight {
- background: linear-gradient(to right, #43e97b, #38f9d7);
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    color: #1a2a6c;
 }
 
+td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-/* 9. Bordes */
 .borde-gradiente {
- border: 5px solid;
- border-image: linear-gradient(45deg, red, blue) 1;
- padding: 20px;
+    border: 5px solid transparent;
+    background: 
+        linear-gradient(#2c3e50, #2c3e50) padding-box, /* Fondo interno sólido */
+        linear-gradient(90deg, #4facfe, #00f2fe, #f06, #4facfe) border-box; /* Borde */
+    background-size: 200% 100%;
+    animation: moverBorde 3s linear infinite;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
