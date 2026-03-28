@@ -1,0 +1,84 @@
+:root {
+    --borde-tabla: #222;
+    --sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+    background-color: #fafafa;
+}
+
+.table-container {
+    margin-left: 5rem;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--borde-tabla);
+    padding: 12px 8px;
+    height: 30px;
+    transition: all 0.3s ease; 
+}
+
+
+.header-causas { 
+    background: linear-gradient(180deg, #ffff00, #ffd700); 
+}
+.header-stats { 
+    background: linear-gradient(180deg, #ffcc00, #ffaa00); 
+    text-align: center; 
+}
+.header-consecuencias { 
+    background: linear-gradient(180deg, #ff9900, #ff7700); 
+}
+
+tr.bg-cian td:nth-child(n+7) {
+    background-color: white;
+}
+
+tr.bg-rosa td:nth-child(n+7) {
+    background-color: white;
+}
+
+
+.bg-cian { background-color: rgba(0, 255, 255, 0.2); }
+.bg-rosa { background-color: rgba(226, 207, 216, 0.4); }
+
+
+.main-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+
+tbody tr {
+    position: relative;
+}
+
+tbody tr::after {
+    content: attr(id);
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+[contenteditable="true"]:focus {
+    background-color: #fffde7 !important;
+    outline: 2px solid #ffcc00;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+tbody tr:hover {
+    filter: brightness(0.98);
+}
