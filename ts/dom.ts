@@ -18,7 +18,7 @@ const paragraph: HTMLParagraphElement = document.createElement("p")
 paragraph.textContent =
     "Esta página fue generada mediante manipulación del DOM usando TypeScript."
 document.body.appendChild(paragraph)
-
+ 
 const list: HTMLUListElement = document.createElement("ul")
 
 const technologies: string[] = [

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 4. Fondo general */
 body {
     background: conic-gradient(from 90deg, red, yellow, green, blue);
@@ -6,11 +7,35 @@ body {
 }
 
 /* 1. Bloques */
+=======
+@keyframes gradienteMovil {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes moverBorde {
+    from { background-position: 0% 0%; }
+    to { background-position: 200% 0%; }
+}
+
+body {
+    background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 600% 600%;
+    animation: gradienteMovil 15s ease infinite;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
 header {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(210deg, #11998e, #38ef7d);
     color: white;
     padding: 20px;
     text-align: center;
+<<<<<<< HEAD
 }
 
 .caja {
@@ -23,10 +48,31 @@ header {
 .inline {
     background: radial-gradient(circle, yellow, orange);
     padding: 5px;
+=======
+    border-radius: 8px;
+}
+
+.caja {
+    background: 
+        radial-gradient(circle, rgba(255,255,255,0.2) 2px, transparent 2px),
+        radial-gradient(circle, #8e2de2, #4a00e0);
+    background-size: 20px 20px, 100% 100%;
+    padding: 20px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.inline {
+    background: radial-gradient(circle, #fcead2, #f2994a);
+    padding: 5px;
+    border-radius: 3px;
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
 }
 
 .link-gradiente {
     display: inline-block;
+<<<<<<< HEAD
     background: linear-gradient(to right, cyan, blue);
     padding: 5px 10px;
     color: white;
@@ -36,10 +82,22 @@ header {
 /* 3. Botón */
 .btn {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
+=======
+    background: linear-gradient(to right, #f2994a, #f2c94c);
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
     border: none;
     padding: 10px 20px;
     color: white;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 /* 5. Texto gradiente */
@@ -53,6 +111,37 @@ header {
 .img-container {
     position: relative;
     display: inline-block;
+=======
+    transition: background 0.4s ease;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.texto-gradiente {
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+}
+
+.texto-gradiente span {
+    background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
 }
 
 .img-container img {
@@ -60,6 +149,7 @@ header {
 }
 
 .img-container::after {
+<<<<<<< HEAD
     content: "";
     position: absolute;
     inset: 0;
@@ -72,6 +162,30 @@ li {
     position: relative;
     padding-left: 20px;
     margin-bottom: 5px;
+=======
+    content: "VISTA PREVIA";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.4s ease;
+}
+
+.img-container:hover::after {
+    opacity: 1; 
+}
+
+li {
+    list-style: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: white;
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
 }
 
 li::before {
@@ -79,6 +193,7 @@ li::before {
     position: absolute;
     left: 0;
     top: 5px;
+<<<<<<< HEAD
     width: 10px;
     height: 10px;
     background: linear-gradient(45deg, purple, cyan);
@@ -100,4 +215,46 @@ tr.highlight {
     border: 5px solid;
     border-image: linear-gradient(45deg, red, blue) 1;
     padding: 20px;
+=======
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    border-radius: 50%;
+}
+
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(to right, #1d2671, #c33764);
+    color: white;
+    padding: 10px;
+}
+
+tr.highlight {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    color: #1a2a6c;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.borde-gradiente {
+    border: 5px solid transparent;
+    background: 
+        linear-gradient(#2c3e50, #2c3e50) padding-box, /* Fondo interno sólido */
+        linear-gradient(90deg, #4facfe, #00f2fe, #f06, #4facfe) border-box; /* Borde */
+    background-size: 200% 100%;
+    animation: moverBorde 3s linear infinite;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+>>>>>>> 38641a1afa77f22369768720e622d8473c22c41d
 }
