@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Servicios</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Microservicio de Servicios</h1>
+            <p class="descripcion">
+                Frontend SPA para registrar y listar servicios.
+            </p>
+
+            <form id="formServicio" class="formulario">
+                <input type="text" id="nombreTecnico" placeholder="Nombre del técnico" required />
+                <input type="text" id="nombreDispositivo" placeholder="Nombre del dispositivo" required />
+                <button type="submit">Guardar servicio</button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card">
+            <h2>Historial de Servicios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Servicio</th>
+                        <th>Técnico</th>
+                        <th>Dispositivo</th>
+                        <th>Fecha salida</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaServicios"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>

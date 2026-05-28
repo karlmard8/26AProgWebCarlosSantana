@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Dispositivos</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Microservicio de Dispositivos</h1>
+            <p class="descripcion">
+                Frontend SPA para registrar y listar dispositivos.
+            </p>
+
+            <form id="formDispositivo" class="formulario">
+                <input type="text" id="nombre" placeholder="Nombre del dispositivo" required />
+                <input type="number" id="precio" placeholder="Precio estimado" step="0.01" required />
+                <button type="submit">Guardar dispositivo</button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card">
+            <h2>Lista de Dispositivos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio estimado</th>
+                        <th>Fecha ingreso</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaDispositivos"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>
