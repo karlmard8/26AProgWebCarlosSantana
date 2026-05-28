@@ -29,6 +29,38 @@ services:
     depends_on:
       - postgres
 
+  backend_servicio:
+    build: ./backend_servicio
+    container_name: backend_servicio
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      PORT: 3002
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: examen_microservicios
+    depends_on:
+      - postgres
+
+  backend_dispositivo:
+    build: ./backend_dispositivo
+    container_name: backend_dispositivo
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      PORT: 3003
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: examen_microservicios
+    depends_on:
+      - postgres
+
   frontend_tecnico:
     build: ./frontend_tecnico
     container_name: frontend_tecnico
@@ -37,6 +69,24 @@ services:
       - "5171:5171"
     depends_on:
       - backend_tecnico
+
+  frontend_servicio:
+    build: ./frontend_servicio
+    container_name: frontend_servicio
+    restart: always
+    ports:
+      - "5172:5172"
+    depends_on:
+      - backend_servicio
+
+  frontend_dispositivo:
+    build: ./frontend_dispositivo
+    container_name: frontend_dispositivo
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend_dispositivo
 
 volumes:
   postgres_data:
