@@ -7,7 +7,7 @@ const PORT = Number(process.env.PORT) || 3001;
 Bun.serve({
     port: PORT,
 
-    async fetch(req) {
+    async fetch(req: Request) {
         const url = new URL(req.url);
 
         // Soporte para peticiones CORS Preflight (OPTIONS)

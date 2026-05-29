@@ -54,12 +54,18 @@ function mostrarDispositivos(dispositivos: Dispositivo[]): void {
 
 async function guardarDispositivo(e: Event): Promise<void> {
     e.preventDefault();
+    e.stopPropagation();
 
     const nombre = nombreInput.value.trim();
     const precio = Number(precioInput.value);
 
     if (!nombre || Number.isNaN(precio)) {
         mostrarMensaje("Por favor completa todos los campos con datos válidos", "error");
+        return;
+    }
+
+    if (precio <= 0) {
+        mostrarMensaje("El precio debe ser mayor a 0", "error");
         return;
     }
 
@@ -73,14 +79,18 @@ async function guardarDispositivo(e: Event): Promise<void> {
         });
 
         if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
+            const errorData = await response.json().catch(() => ({ mensaje: response.statusText }));
+            throw new Error(errorData.mensaje || errorData.error || `Error ${response.status}`);
         }
 
+        const resultado = await response.json();
         mostrarMensaje("Dispositivo guardado correctamente", "exito");
         formDispositivo.reset();
-        cargarDispositivos();
+        await cargarDispositivos();
     } catch (error) {
-        mostrarMensaje(`Error al guardar dispositivo: ${error}`, "error");
+        const mensajeError = error instanceof Error ? error.message : String(error);
+        console.error("Error al guardar:", mensajeError);
+        mostrarMensaje(`Error al guardar dispositivo: ${mensajeError}`, "error");
     }
 }
 
@@ -115,6 +125,7 @@ function mostrarMensaje(texto: string, tipo: "exito" | "error"): void {
     }, 5000);
 }
 
-formDispositivo.addEventListener("submit", guardarDispositivo);
+// Usar addEventListener con { once: false } para asegurar que se ejecute siempre
+formDispositivo.addEventListener("submit", guardarDispositivo, false);
 
 cargarDispositivos();
