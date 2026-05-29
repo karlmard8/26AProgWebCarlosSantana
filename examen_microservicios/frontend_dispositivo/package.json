@@ -1,0 +1,18 @@
+{
+  "name": "frontend_dispositivo",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./src/main.ts --outfile=./dist/main.js",
+    "dev": "bun run build && bunx serve . -l tcp://0.0.0.0:5173",
+    "start": "bun run build && bunx serve . -l tcp://0.0.0.0:5173"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "module": "index.ts",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

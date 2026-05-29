@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Servicios - Dashboard</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card auth-zone">
+            <div class="auth-header">
+                <div class="logo-placeholder">
+                    <i data-lucide="settings"></i>
+                </div>
+                <h1>Portal de Servicios</h1>
+                <p class="descripcion">
+                    Registro de servicios en el sistema de microservicios.
+                </p>
+            </div>
+
+            <form id="formServicio" class="formulario">
+                <div class="input-group">
+                    <i data-lucide="user" class="input-icon"></i>
+                    <input type="text" id="nombreTecnico" placeholder="Nombre del técnico" required />
+                </div>
+
+                <div class="input-group">
+                    <i data-lucide="cpu" class="input-icon"></i>
+                    <input type="text" id="nombreDispositivo" placeholder="Nombre del dispositivo" required />
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i data-lucide="plus-circle"></i> Registrar servicio
+                </button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card table-zone">
+            <div class="table-header">
+                <div>
+                    <h2>Historial de Servicios</h2>
+                    <p class="subtext">Servicios registrados en la base de datos</p>
+                </div>
+                <i data-lucide="clipboard-list" class="header-icon"></i>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Servicio</th>
+                            <th>Técnico</th>
+                            <th>Dispositivo</th>
+                            <th>Fecha salida</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaServicios"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>

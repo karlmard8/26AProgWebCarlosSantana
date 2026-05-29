@@ -67,6 +67,9 @@ services:
     restart: always
     ports:
       - "5171:5171"
+    volumes:
+      - ./frontend_tecnico:/app:delegated
+      - frontend_tecnico_node_modules:/app/node_modules
     depends_on:
       - backend_tecnico
 
@@ -76,6 +79,9 @@ services:
     restart: always
     ports:
       - "5172:5172"
+    volumes:
+      - ./frontend_servicio:/app:delegated
+      - frontend_servicio_node_modules:/app/node_modules
     depends_on:
       - backend_servicio
 
@@ -85,8 +91,14 @@ services:
     restart: always
     ports:
       - "5173:5173"
+    volumes:
+      - ./frontend_dispositivo:/app:delegated
+      - frontend_dispositivo_node_modules:/app/node_modules
     depends_on:
       - backend_dispositivo
 
 volumes:
   postgres_data:
+  frontend_tecnico_node_modules:
+  frontend_servicio_node_modules:
+  frontend_dispositivo_node_modules:

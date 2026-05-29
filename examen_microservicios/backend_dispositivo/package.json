@@ -1,0 +1,21 @@
+{
+  "name": "backend_dispositivo",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "pg": "latest"
+  },
+  "devDependencies": {
+    "@types/pg": "latest",
+    "@types/bun": "latest"
+  },
+  "module": "src/index.ts",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

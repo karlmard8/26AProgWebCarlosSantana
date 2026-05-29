@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Dispositivos - Dashboard</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="card auth-zone">
+            <div class="auth-header">
+                <div class="logo-placeholder">
+                    <i data-lucide="cpu"></i>
+                </div>
+                <h1>Portal de Dispositivos</h1>
+                <p class="descripcion">
+                    Alta y gestión de dispositivos en el sistema de microservicios.
+                </p>
+            </div>
+
+            <form id="formDispositivo" class="formulario">
+                <div class="input-group">
+                    <i data-lucide="monitor" class="input-icon"></i>
+                    <input type="text" id="nombre" placeholder="Nombre del dispositivo" required />
+                </div>
+
+                <div class="input-group">
+                    <i data-lucide="dollar-sign" class="input-icon"></i>
+                    <input type="number" id="precio" placeholder="Precio estimado" step="0.01" required />
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i data-lucide="plus-circle"></i> Registrar dispositivo
+                </button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card table-zone">
+            <div class="table-header">
+                <div>
+                    <h2>Lista de Dispositivos</h2>
+                    <p class="subtext">Dispositivos registrados en la base de datos</p>
+                </div>
+                <i data-lucide="server" class="header-icon"></i>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio estimado</th>
+                            <th>Fecha ingreso</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDispositivos"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>
