@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: escuela
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  bun_app: # Nombre del servicio, puedes cambiarlo
+    build: . # reconstruir lo del directorio actual
+    image: practica-microservicio-bun:latest # Usa tu imagen construida
+    restart: unless-stopped
+    ports:
+      - "3000:3000" # Expone el puerto 3000
+    environment:
+      # Define variables de entorno que tu app necesita para conectarse a Postgres
+      DB_HOST: postgres_db
+      DB_USER: admin
+      DB_PASSWORD: admin123
+      DB_NAME: escuela
+      DB_PORT: 5432
+    depends_on:
+      - postgres # Asegura que Postgres inicie primero
+
+volumes:
+  postgres_data:
