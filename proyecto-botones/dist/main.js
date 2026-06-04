@@ -19,7 +19,7 @@ function createSpanButton(text) {
 }
 function createImageButton(text) {
   const image = document.createElement("img");
-  image.src = "https://via.placeholder.com/160x50?text=IMG";
+  image.src = "https://clashroyalegame.online/clash-royale.webp";
   image.alt = text;
   image.className = "fake-button";
   image.addEventListener("click", () => {
@@ -85,47 +85,6 @@ function createSectionButton(text) {
 }
 
 // src/main.ts
-var style = document.createElement("style");
-style.textContent = `
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-
-  h1 {
-    margin-bottom: 10px;
-  }
-
-  #app {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-  }
-
-  .fake-button {
-    cursor: pointer;
-    padding: 10px 15px;
-    border: 1px solid black;
-    border-radius: 6px;
-    background: lightgray;
-    width: fit-content;
-    transition: 0.2s;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-  }
-
-  .fake-button:hover {
-    background: gray;
-    color: white;
-  }
-
-  .fake-button:active {
-    transform: scale(0.95);
-  }
-`;
-document.head.appendChild(style);
 var app = document.getElementById("app");
 if (app) {
   app.appendChild(createDivButton("Botón con DIV"));
